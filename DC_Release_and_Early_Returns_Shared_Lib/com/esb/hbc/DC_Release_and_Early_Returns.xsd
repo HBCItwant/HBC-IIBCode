@@ -1,0 +1,909 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+  <xs:element name="OrderRelease">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" name="Order">
+          <xs:complexType>
+            <xs:all>
+              <xs:element minOccurs="0" name="Extn">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="ExtnIsFiftyOne" type="xs:string" use="optional"/>
+                      <xs:attribute name="ExtnLoyaltyNo" type="xs:string" use="optional"/>
+                      <xs:attribute name="ExtnCommLang" type="xs:string" use="optional"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="OrderLines">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="OrderLine">
+                      <xs:complexType>
+                        <xs:all>
+                          <xs:element minOccurs="0" name="Item">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute name="ItemDesc" type="xs:string" use="optional"/>
+                                  <xs:attribute name="ItemID" type="xs:string" use="optional"/>
+                                  <xs:attribute name="ItemShortDesc" type="xs:string" use="optional"/>
+                                  <xs:attribute name="ProductClass" type="xs:string" use="optional"/>
+                                  <xs:attribute name="ProductLine" type="xs:string" use="optional"/>
+                                  <xs:attribute name="UnitCost" type="xs:string" use="optional"/>
+                                  <xs:attribute name="UnitOfMeasure" type="xs:string" use="optional"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element minOccurs="0" name="Extn">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute name="ExtnWebLineNumber" type="xs:string" use="optional"/>
+                                  <xs:attribute name="ExtnShipZone" type="xs:string" use="optional"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element minOccurs="0" name="PersonInfoShipTo">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute name="AddressLine1" type="xs:string" use="optional"/>
+                                  <xs:attribute name="AddressLine2" type="xs:string" use="optional"/>
+                                  <xs:attribute name="AddressLine3" type="xs:string" use="optional"/>
+                                  <xs:attribute name="AddressLine4" type="xs:string" use="optional"/>
+                                  <xs:attribute name="AddressLine5" type="xs:string" use="optional"/>
+                                  <xs:attribute name="AddressLine6" type="xs:string" use="optional"/>
+                                  <xs:attribute name="AlternateEmailID" type="xs:string" use="optional"/>
+                                  <xs:attribute name="Beeper" type="xs:string" use="optional"/>
+                                  <xs:attribute name="City" type="xs:string" use="optional"/>
+                                  <xs:attribute name="Company" type="xs:string" use="optional"/>
+                                  <xs:attribute name="Country" type="xs:string" use="optional"/>
+                                  <xs:attribute name="DayFaxNo" type="xs:string" use="optional"/>
+                                  <xs:attribute name="DayPhone" type="xs:string" use="optional"/>
+                                  <xs:attribute name="Department" type="xs:string" use="optional"/>
+                                  <xs:attribute name="EMailID" type="xs:string" use="optional"/>
+                                  <xs:attribute name="EveningFaxNo" type="xs:string" use="optional"/>
+                                  <xs:attribute name="EveningPhone" type="xs:string" use="optional"/>
+                                  <xs:attribute name="FirstName" type="xs:string" use="optional"/>
+                                  <xs:attribute name="JobTitle" type="xs:string" use="optional"/>
+                                  <xs:attribute name="LastName" type="xs:string" use="optional"/>
+                                  <xs:attribute name="MiddleName" type="xs:string" use="optional"/>
+                                  <xs:attribute name="MobilePhone" type="xs:string" use="optional"/>
+                                  <xs:attribute name="OtherPhone" type="xs:string" use="optional"/>
+                                  <xs:attribute name="PersonID" type="xs:string" use="optional"/>
+                                  <xs:attribute name="PersonInfoKey" type="xs:string" use="optional"/>
+                                  <xs:attribute name="State" type="xs:string" use="optional"/>
+                                  <xs:attribute name="Suffix" type="xs:string" use="optional"/>
+                                  <xs:attribute name="Title" type="xs:string" use="optional"/>
+                                  <xs:attribute name="ZipCode" type="xs:string" use="optional"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element minOccurs="0" name="ItemDetails">
+                            <xs:complexType>
+                              <xs:all>
+                                <xs:element minOccurs="0" name="Extn">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute name="ExtnClass" type="xs:string" use="optional"/>
+                                        <xs:attribute name="ExtnDepartment" type="xs:string" use="optional"/>
+                                        <xs:attribute name="ExtnVendor" type="xs:string" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:all>
+                              <xs:attribute name="CanUseAsServiceTool" type="xs:string" use="optional"/>
+                              <xs:attribute name="DisplayItemId" type="xs:string" use="optional"/>
+                              <xs:attribute name="GlobalItemID" type="xs:string" use="optional"/>
+                              <xs:attribute name="InheritAttributesFromClassification" type="xs:string" use="optional"/>
+                              <xs:attribute name="IsShippingCntr" type="xs:string" use="optional"/>
+                              <xs:attribute name="ItemGroupCode" type="xs:string" use="optional"/>
+                              <xs:attribute name="ItemID" type="xs:string" use="optional"/>
+                              <xs:attribute name="ItemKey" type="xs:string" use="optional"/>
+                              <xs:attribute name="OrganizationCode" type="xs:string" use="optional"/>
+                              <xs:attribute name="UnitOfMeasure" type="xs:string" use="optional"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:all>
+                        <xs:attribute name="MaxLineStatus" type="xs:string" use="optional"/>
+                        <xs:attribute name="MinLineStatus" type="xs:string" use="optional"/>
+                        <xs:attribute name="OrderLineKey" type="xs:string" use="optional"/>
+                        <xs:attribute name="OriginalOrderedQty" type="xs:string" use="optional"/>
+                        <xs:attribute name="PrimeLineNo" type="xs:string" use="optional"/>
+                        <xs:attribute name="Status" type="xs:string" use="optional"/>
+                        <xs:attribute name="SubLineNo" type="xs:string" use="optional"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="TotalNumberOfRecords" type="xs:string"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="PersonInfoBillTo">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="AddressLine1" type="xs:string" use="optional"/>
+                      <xs:attribute name="AddressLine2" type="xs:string" use="optional"/>
+                      <xs:attribute name="AddressLine3" type="xs:string" use="optional"/>
+                      <xs:attribute name="AddressLine4" type="xs:string" use="optional"/>
+                      <xs:attribute name="AddressLine5" type="xs:string" use="optional"/>
+                      <xs:attribute name="AddressLine6" type="xs:string" use="optional"/>
+                      <xs:attribute name="AlternateEmailID" type="xs:string" use="optional"/>
+                      <xs:attribute name="Beeper" type="xs:string" use="optional"/>
+                      <xs:attribute name="City" type="xs:string" use="optional"/>
+                      <xs:attribute name="Company" type="xs:string" use="optional"/>
+                      <xs:attribute name="Country" type="xs:string" use="optional"/>
+                      <xs:attribute name="DayFaxNo" type="xs:string" use="optional"/>
+                      <xs:attribute name="DayPhone" type="xs:string" use="optional"/>
+                      <xs:attribute name="Department" type="xs:string" use="optional"/>
+                      <xs:attribute name="EMailID" type="xs:string" use="optional"/>
+                      <xs:attribute name="EveningFaxNo" type="xs:string" use="optional"/>
+                      <xs:attribute name="EveningPhone" type="xs:string" use="optional"/>
+                      <xs:attribute name="FirstName" type="xs:string" use="optional"/>
+                      <xs:attribute name="JobTitle" type="xs:string" use="optional"/>
+                      <xs:attribute name="LastName" type="xs:string" use="optional"/>
+                      <xs:attribute name="MiddleName" type="xs:string" use="optional"/>
+                      <xs:attribute name="MobilePhone" type="xs:string" use="optional"/>
+                      <xs:attribute name="OtherPhone" type="xs:string" use="optional"/>
+                      <xs:attribute name="PersonID" type="xs:string" use="optional"/>
+                      <xs:attribute name="PersonInfoKey" type="xs:string" use="optional"/>
+                      <xs:attribute name="State" type="xs:string" use="optional"/>
+                      <xs:attribute name="Suffix" type="xs:string" use="optional"/>
+                      <xs:attribute name="Title" type="xs:string" use="optional"/>
+                      <xs:attribute name="ZipCode" type="xs:string" use="optional"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="PersonInfoShipTo">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="AddressLine1" type="xs:string" use="optional"/>
+                      <xs:attribute name="AddressLine2" type="xs:string" use="optional"/>
+                      <xs:attribute name="AddressLine3" type="xs:string" use="optional"/>
+                      <xs:attribute name="AddressLine4" type="xs:string" use="optional"/>
+                      <xs:attribute name="AddressLine5" type="xs:string" use="optional"/>
+                      <xs:attribute name="AddressLine6" type="xs:string" use="optional"/>
+                      <xs:attribute name="AlternateEmailID" type="xs:string" use="optional"/>
+                      <xs:attribute name="Beeper" type="xs:string" use="optional"/>
+                      <xs:attribute name="City" type="xs:string" use="optional"/>
+                      <xs:attribute name="Company" type="xs:string" use="optional"/>
+                      <xs:attribute name="Country" type="xs:string" use="optional"/>
+                      <xs:attribute name="DayFaxNo" type="xs:string" use="optional"/>
+                      <xs:attribute name="DayPhone" type="xs:string" use="optional"/>
+                      <xs:attribute name="Department" type="xs:string" use="optional"/>
+                      <xs:attribute name="EMailID" type="xs:string" use="optional"/>
+                      <xs:attribute name="EveningFaxNo" type="xs:string" use="optional"/>
+                      <xs:attribute name="EveningPhone" type="xs:string" use="optional"/>
+                      <xs:attribute name="FirstName" type="xs:string" use="optional"/>
+                      <xs:attribute name="JobTitle" type="xs:string" use="optional"/>
+                      <xs:attribute name="LastName" type="xs:string" use="optional"/>
+                      <xs:attribute name="MiddleName" type="xs:string" use="optional"/>
+                      <xs:attribute name="MobilePhone" type="xs:string" use="optional"/>
+                      <xs:attribute name="OtherPhone" type="xs:string" use="optional"/>
+                      <xs:attribute name="PersonID" type="xs:string" use="optional"/>
+                      <xs:attribute name="PersonInfoKey" type="xs:string" use="optional"/>
+                      <xs:attribute name="State" type="xs:string" use="optional"/>
+                      <xs:attribute name="Suffix" type="xs:string" use="optional"/>
+                      <xs:attribute name="Title" type="xs:string" use="optional"/>
+                      <xs:attribute name="ZipCode" type="xs:string" use="optional"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ChargeTransactionDetails">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="ChargeTransactionDetail">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="CreditCardTransactions">
+                            <xs:complexType mixed="true">
+                              <xs:sequence>
+                                <xs:element minOccurs="0" name="CreditCardTransaction">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute name="AuthAmount" type="xs:string" use="optional"/>
+                                        <xs:attribute name="AuthAvs" type="xs:string" use="optional"/>
+                                        <xs:attribute name="AuthCode" type="xs:string" use="optional"/>
+                                        <xs:attribute name="AuthReturnCode" type="xs:string" use="optional"/>
+                                        <xs:attribute name="AuthReturnFlag" type="xs:string" use="optional"/>
+                                        <xs:attribute name="AuthReturnMessage" type="xs:string" use="optional"/>
+                                        <xs:attribute name="AuthTime" type="xs:dateTime" use="optional"/>
+                                        <xs:attribute name="CVVAuthCode" type="xs:string" use="optional"/>
+                                        <xs:attribute name="ChargeTransactionKey" type="xs:string" use="optional"/>
+                                        <xs:attribute name="CreditCardTransactionKey" type="xs:string" use="optional"/>
+                                        <xs:attribute name="InternalReturnCode" type="xs:string" use="optional"/>
+                                        <xs:attribute name="InternalReturnFlag" type="xs:string" use="optional"/>
+                                        <xs:attribute name="InternalReturnMessage" type="xs:string" use="optional"/>
+                                        <xs:attribute name="ParentKey" type="xs:string" use="optional"/>
+                                        <xs:attribute name="Reference1" type="xs:string" use="optional"/>
+                                        <xs:attribute name="Reference2" type="xs:string" use="optional"/>
+                                        <xs:attribute name="RequestId" type="xs:string" use="optional"/>
+                                        <xs:attribute name="TranAmount" type="xs:string" use="optional"/>
+                                        <xs:attribute name="TranRequestTime" type="xs:dateTime" use="optional"/>
+                                        <xs:attribute name="TranReturnCode" type="xs:string" use="optional"/>
+                                        <xs:attribute name="TranReturnFlag" type="xs:string" use="optional"/>
+                                        <xs:attribute name="TranReturnMessage" type="xs:string" use="optional"/>
+                                        <xs:attribute name="TranType" type="xs:string" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="AuthorizationID" type="xs:string" use="optional"/>
+                        <xs:attribute name="ChargeType" type="xs:string" use="optional"/>
+                        <xs:attribute name="OpenAuthorizedAmount" type="xs:decimal" use="optional"/>
+                        <xs:attribute name="PaymentKey" type="xs:string" use="optional"/>
+                        <xs:attribute name="TransferFromOhKey" type="xs:string" use="optional"/>
+                        <xs:attribute name="TransferToOhKey" type="xs:string" use="optional"/>
+                        <xs:attribute name="CreditAmount" type="xs:decimal" use="optional"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="AdditionalExpectedAuthorizations" type="xs:decimal" use="optional"/>
+                  <xs:attribute name="TotalCredits" type="xs:decimal" use="optional"/>
+                  <xs:attribute name="TotalDebits" type="xs:decimal" use="optional"/>
+                  <xs:attribute name="TotalOpenAuthorizations" type="xs:decimal" use="optional"/>
+                  <xs:attribute name="TotalOpenBookings" type="xs:decimal" use="optional"/>
+                  <xs:attribute name="TotalTransferredIn" type="xs:decimal" use="optional"/>
+                  <xs:attribute name="TotalTransferredOut" type="xs:decimal" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="PaymentMethods">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="PaymentMethod">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="ChargeTransactionDetail">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element minOccurs="0" name="CreditCardTransactions">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element minOccurs="0" name="CreditCardTransaction">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute name="AuthAmount" type="xs:decimal" use="optional"/>
+                                              <xs:attribute name="AuthAvs" type="xs:string" use="optional"/>
+                                              <xs:attribute name="AuthCode" type="xs:string" use="optional"/>
+                                              <xs:attribute name="AuthReturnCode" type="xs:string" use="optional"/>
+                                              <xs:attribute name="AuthReturnFlag" type="xs:string" use="optional"/>
+                                              <xs:attribute name="AuthReturnMessage" type="xs:string" use="optional"/>
+                                              <xs:attribute name="AuthTime" type="xs:dateTime" use="optional"/>
+                                              <xs:attribute name="CVVAuthCode" type="xs:string" use="optional"/>
+                                              <xs:attribute name="ChargeTransactionKey" type="xs:string" use="optional"/>
+                                              <xs:attribute name="CreditCardTransactionKey" type="xs:string" use="optional"/>
+                                              <xs:attribute name="InternalReturnCode" type="xs:string" use="optional"/>
+                                              <xs:attribute name="InternalReturnFlag" type="xs:string" use="optional"/>
+                                              <xs:attribute name="InternalReturnMessage" type="xs:string" use="optional"/>
+                                              <xs:attribute name="ParentKey" type="xs:string" use="optional"/>
+                                              <xs:attribute name="Reference1" type="xs:string" use="optional"/>
+                                              <xs:attribute name="Reference2" type="xs:string" use="optional"/>
+                                              <xs:attribute name="RequestId" type="xs:string" use="optional"/>
+                                              <xs:attribute name="TranAmount" type="xs:decimal" use="optional"/>
+                                              <xs:attribute name="TranRequestTime" type="xs:dateTime" use="optional"/>
+                                              <xs:attribute name="TranReturnCode" type="xs:string" use="optional"/>
+                                              <xs:attribute name="TranReturnFlag" type="xs:string" use="optional"/>
+                                              <xs:attribute name="TranReturnMessage" type="xs:string" use="optional"/>
+                                              <xs:attribute name="TranType" type="xs:string" use="optional"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="AuthorizationID" type="xs:string" use="optional"/>
+                              <xs:attribute name="ChargeType" type="xs:string" use="optional"/>
+                              <xs:attribute name="OpenAuthorizedAmount" type="xs:decimal" use="optional"/>
+                              <xs:attribute name="PaymentKey" type="xs:string" use="optional"/>
+                              <xs:attribute name="TransferFromOhKey" type="xs:string" use="optional"/>
+                              <xs:attribute name="TransferToOhKey" type="xs:string" use="optional"/>
+                              <xs:attribute name="CreditAmount" type="xs:decimal" use="optional"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="CreditCardExpDate" type="xs:string" use="optional"/>
+                        <xs:attribute name="CreditCardName" type="xs:string" use="optional"/>
+                        <xs:attribute name="CreditCardType" type="xs:string" use="optional"/>
+                        <xs:attribute name="PaymentKey" type="xs:string" use="optional"/>
+                        <xs:attribute name="PaymentReference1" type="xs:string" use="optional"/>
+                        <xs:attribute name="PaymentType" type="xs:string" use="optional"/>
+                        <xs:attribute name="PaymentTypeGroup" type="xs:string" use="optional"/>
+                        <xs:attribute name="SvcNo" type="xs:string" use="optional"/>
+                        <xs:attribute name="TotalAuthorized" type="xs:decimal" use="optional"/>
+                        <xs:attribute name="TotalCharged" type="xs:decimal" use="optional"/>
+                        <xs:attribute name="CreditCardNo" type="xs:string" use="optional"/>
+                        <xs:attribute name="PaymentReference4" type="xs:string" use="optional"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="AdditionalAddresses" type="xs:string"/>
+              <xs:element minOccurs="0" name="Promotions">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="Promotion">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="PromotionId" type="xs:string" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="HeaderCharges">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="HeaderCharge">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="Extn">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute name="ExtnOriginalAmount" type="xs:string"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="ChargeAmount" type="xs:decimal" use="optional"/>
+                        <xs:attribute name="ChargeCategory" type="xs:string" use="optional"/>
+                        <xs:attribute name="ChargeName" type="xs:string" use="optional"/>
+                        <xs:attribute name="ChargeNameKey" type="xs:string" use="optional"/>
+                        <xs:attribute name="InvoicedChargeAmount" type="xs:decimal" use="optional"/>
+                        <xs:attribute name="IsBillable" type="xs:string" use="optional"/>
+                        <xs:attribute name="IsDiscount" type="xs:string" use="optional"/>
+                        <xs:attribute name="IsShippingCharge" type="xs:string" use="optional"/>
+                        <xs:attribute name="Reference" type="xs:string" use="optional"/>
+                        <xs:attribute name="RemainingChargeAmount" type="xs:decimal" use="optional"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="HeaderTaxes" type="xs:string"/>
+            </xs:all>
+            <xs:attribute name="BillToID" type="xs:string" use="optional"/>
+            <xs:attribute name="DocumentType" type="xs:string" use="optional"/>
+            <xs:attribute name="EnteredBy" type="xs:string" use="optional"/>
+            <xs:attribute name="EnterpriseCode" type="xs:string" use="optional"/>
+            <xs:attribute name="EntryType" type="xs:string" use="optional"/>
+            <xs:attribute name="InitialAuthorizationID" type="xs:string" use="optional"/>
+            <xs:attribute name="InitialNumberOfLines" type="xs:string" use="optional"/>
+            <xs:attribute name="OrderDate" type="xs:dateTime" use="optional"/>
+            <xs:attribute name="OrderHeaderKey" type="xs:string" use="optional"/>
+            <xs:attribute name="OrderNo" type="xs:string" use="optional"/>
+            <xs:attribute name="OrderPurpose" type="xs:string" use="optional"/>
+            <xs:attribute name="SellerOrganizationCode" type="xs:string" use="optional"/>
+            <xs:attribute name="Status" type="xs:string" use="optional"/>
+            <xs:attribute name="Modifyts" type="xs:dateTime" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="Notes">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute name="NumberOfNotes" type="xs:string" use="optional"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="PersonInfoShipTo">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute name="AddressLine1" type="xs:string" use="optional"/>
+                <xs:attribute name="AddressLine2" type="xs:string" use="optional"/>
+                <xs:attribute name="AddressLine3" type="xs:string" use="optional"/>
+                <xs:attribute name="AddressLine4" type="xs:string" use="optional"/>
+                <xs:attribute name="AddressLine5" type="xs:string" use="optional"/>
+                <xs:attribute name="AddressLine6" type="xs:string" use="optional"/>
+                <xs:attribute name="AlternateEmailID" type="xs:string" use="optional"/>
+                <xs:attribute name="Beeper" type="xs:string" use="optional"/>
+                <xs:attribute name="City" type="xs:string" use="optional"/>
+                <xs:attribute name="Company" type="xs:string" use="optional"/>
+                <xs:attribute name="Country" type="xs:string" use="optional"/>
+                <xs:attribute name="DayFaxNo" type="xs:string" use="optional"/>
+                <xs:attribute name="DayPhone" type="xs:string" use="optional"/>
+                <xs:attribute name="Department" type="xs:string" use="optional"/>
+                <xs:attribute name="EMailID" type="xs:string" use="optional"/>
+                <xs:attribute name="EveningFaxNo" type="xs:string" use="optional"/>
+                <xs:attribute name="EveningPhone" type="xs:string" use="optional"/>
+                <xs:attribute name="FirstName" type="xs:string" use="optional"/>
+                <xs:attribute name="JobTitle" type="xs:string" use="optional"/>
+                <xs:attribute name="LastName" type="xs:string" use="optional"/>
+                <xs:attribute name="MiddleName" type="xs:string" use="optional"/>
+                <xs:attribute name="MobilePhone" type="xs:string" use="optional"/>
+                <xs:attribute name="OtherPhone" type="xs:string" use="optional"/>
+                <xs:attribute name="PersonID" type="xs:string" use="optional"/>
+                <xs:attribute name="PersonInfoKey" type="xs:string" use="optional"/>
+                <xs:attribute name="State" type="xs:string" use="optional"/>
+                <xs:attribute name="Suffix" type="xs:string" use="optional"/>
+                <xs:attribute name="Title" type="xs:string" use="optional"/>
+                <xs:attribute name="ZipCode" type="xs:string" use="optional"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="PackListPriceInfo">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute name="Currency" type="xs:string" use="optional"/>
+                <xs:attribute name="HeaderCharges" type="xs:decimal" use="optional"/>
+                <xs:attribute name="HeaderDiscount" type="xs:decimal" use="optional"/>
+                <xs:attribute name="HeaderTax" type="xs:decimal" use="optional"/>
+                <xs:attribute name="LineSubTotal" type="xs:decimal" use="optional"/>
+                <xs:attribute name="TotalAmount" type="xs:decimal" use="optional"/>
+                <xs:attribute name="TotalCharges" type="xs:decimal" use="optional"/>
+                <xs:attribute name="TotalDiscountAmount" type="xs:decimal" use="optional"/>
+                <xs:attribute name="TotalTax" type="xs:decimal" use="optional"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="OrderLine">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="Item">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="CostCurrency" type="xs:string" use="optional"/>
+                      <xs:attribute name="CountryOfOrigin" type="xs:string" use="optional"/>
+                      <xs:attribute name="CustomerItem" type="xs:string" use="optional"/>
+                      <xs:attribute name="CustomerItemDesc" type="xs:string" use="optional"/>
+                      <xs:attribute name="ECCNNo" type="xs:string" use="optional"/>
+                      <xs:attribute name="HarmonizedCode" type="xs:string" use="optional"/>
+                      <xs:attribute name="ISBN" type="xs:string" use="optional"/>
+                      <xs:attribute name="ItemDesc" type="xs:string" use="optional"/>
+                      <xs:attribute name="ItemID" type="xs:string" use="optional"/>
+                      <xs:attribute name="ItemShortDesc" type="xs:string" use="optional"/>
+                      <xs:attribute name="ItemWeight" type="xs:decimal" use="optional"/>
+                      <xs:attribute name="ItemWeightUOM" type="xs:string" use="optional"/>
+                      <xs:attribute name="ManufacturerItem" type="xs:string" use="optional"/>
+                      <xs:attribute name="ManufacturerItemDesc" type="xs:string" use="optional"/>
+                      <xs:attribute name="ManufacturerName" type="xs:string" use="optional"/>
+                      <xs:attribute name="NMFCClass" type="xs:string" use="optional"/>
+                      <xs:attribute name="NMFCCode" type="xs:string" use="optional"/>
+                      <xs:attribute name="NMFCDescription" type="xs:string" use="optional"/>
+                      <xs:attribute name="ProductClass" type="xs:string" use="optional"/>
+                      <xs:attribute name="ProductLine" type="xs:string" use="optional"/>
+                      <xs:attribute name="ScheduleBCode" type="xs:string" use="optional"/>
+                      <xs:attribute name="SupplierItem" type="xs:string" use="optional"/>
+                      <xs:attribute name="SupplierItemDesc" type="xs:string" use="optional"/>
+                      <xs:attribute name="TaxProductCode" type="xs:string" use="optional"/>
+                      <xs:attribute name="UPCCode" type="xs:string" use="optional"/>
+                      <xs:attribute name="UnitCost" type="xs:decimal" use="optional"/>
+                      <xs:attribute name="UnitOfMeasure" type="xs:string" use="optional"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="LinePriceInfo">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="IsPriceLocked" type="xs:string" use="optional"/>
+                      <xs:attribute name="LineTotal" type="xs:decimal" use="optional"/>
+                      <xs:attribute name="ListPrice" type="xs:decimal" use="optional"/>
+                      <xs:attribute name="OrderedPricingQty" type="xs:string" use="optional"/>
+                      <xs:attribute name="RetailPrice" type="xs:decimal" use="optional"/>
+                      <xs:attribute name="UnitPrice" type="xs:decimal" use="optional"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Extn">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="ExtnIsReturnable" type="xs:string" use="optional"/>
+                      <xs:attribute name="ExtnPackSlpPrcSuppress" type="xs:string" use="optional"/>
+                      <xs:attribute name="ExtnSignatureRequired" type="xs:string" use="optional"/>
+                      <xs:attribute name="ExtnTransactionID" type="xs:string" use="optional"/>
+                      <xs:attribute name="ExtnWebLineNumber" type="xs:string" use="optional"/>
+                      <xs:attribute name="ExtnShipZone" type="xs:string" use="optional"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Instructions">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="Instruction">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="InstructionText" type="xs:string" use="optional"/>
+                            <xs:attribute name="InstructionType" type="xs:string" use="optional"/>
+                            <xs:attribute name="InstructionURL" type="xs:string" use="optional"/>
+                            <xs:attribute name="SequenceNo" type="xs:string" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="NumberOfInstructions" type="xs:string" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Shipnode">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="NodeType" type="xs:string" use="optional"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Promotions">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="Promotion">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="PromotionId" type="xs:string" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="OrderDates">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="OrderDate">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="DateTypeId" type="xs:string" use="optional"/>
+                            <xs:attribute name="ActualDate" type="xs:string" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="PersonInfoShipTo">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="AddressLine1" type="xs:string" use="optional"/>
+                      <xs:attribute name="AddressLine2" type="xs:string" use="optional"/>
+                      <xs:attribute name="AddressLine3" type="xs:string" use="optional"/>
+                      <xs:attribute name="AddressLine4" type="xs:string" use="optional"/>
+                      <xs:attribute name="AddressLine5" type="xs:string" use="optional"/>
+                      <xs:attribute name="AddressLine6" type="xs:string" use="optional"/>
+                      <xs:attribute name="AlternateEmailID" type="xs:string" use="optional"/>
+                      <xs:attribute name="Beeper" type="xs:string" use="optional"/>
+                      <xs:attribute name="City" type="xs:string" use="optional"/>
+                      <xs:attribute name="Company" type="xs:string" use="optional"/>
+                      <xs:attribute name="Country" type="xs:string" use="optional"/>
+                      <xs:attribute name="DayFaxNo" type="xs:string" use="optional"/>
+                      <xs:attribute name="DayPhone" type="xs:string" use="optional"/>
+                      <xs:attribute name="Department" type="xs:string" use="optional"/>
+                      <xs:attribute name="EMailID" type="xs:string" use="optional"/>
+                      <xs:attribute name="EveningFaxNo" type="xs:string" use="optional"/>
+                      <xs:attribute name="EveningPhone" type="xs:string" use="optional"/>
+                      <xs:attribute name="FirstName" type="xs:string" use="optional"/>
+                      <xs:attribute name="JobTitle" type="xs:string" use="optional"/>
+                      <xs:attribute name="LastName" type="xs:string" use="optional"/>
+                      <xs:attribute name="MiddleName" type="xs:string" use="optional"/>
+                      <xs:attribute name="MobilePhone" type="xs:string" use="optional"/>
+                      <xs:attribute name="OtherPhone" type="xs:string" use="optional"/>
+                      <xs:attribute name="PersonID" type="xs:string" use="optional"/>
+                      <xs:attribute name="PersonInfoKey" type="xs:string" use="optional"/>
+                      <xs:attribute name="State" type="xs:string" use="optional"/>
+                      <xs:attribute name="Suffix" type="xs:string" use="optional"/>
+                      <xs:attribute name="Title" type="xs:string" use="optional"/>
+                      <xs:attribute name="ZipCode" type="xs:string" use="optional"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ItemDetails">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element minOccurs="0" name="Extn">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="ExtnDepartment" type="xs:string" use="optional"/>
+                            <xs:attribute name="ExtnClass" type="xs:string" use="optional"/>
+                            <xs:attribute name="ExtnVendor" type="xs:string" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="PrimaryInformation">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="ManufacturerName" type="xs:string" use="optional"/>
+                            <xs:attribute name="ShortDescription" type="xs:string" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="ItemAliasList">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element maxOccurs="unbounded" minOccurs="0" name="ItemAlias">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute name="AliasName" type="xs:string" use="optional"/>
+                                  <xs:attribute name="AliasValue" type="xs:string" use="optional"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="AdditionalAttributeList">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element maxOccurs="unbounded" minOccurs="0" name="AdditionalAttribute">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute name="Name" type="xs:string" use="optional"/>
+                                  <xs:attribute name="Value" type="xs:string" use="optional"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:all>
+                  <xs:attribute name="CanUseAsServiceTool" type="xs:string" use="optional"/>
+                  <xs:attribute name="Createprogid" type="xs:string" use="optional"/>
+                  <xs:attribute name="Createts" type="xs:dateTime" use="optional"/>
+                  <xs:attribute name="Createuserid" type="xs:string" use="optional"/>
+                  <xs:attribute name="DisplayItemId" type="xs:string" use="optional"/>
+                  <xs:attribute name="GlobalItemID" type="xs:string" use="optional"/>
+                  <xs:attribute name="InheritAttributesFromClassification" type="xs:string" use="optional"/>
+                  <xs:attribute name="IsShippingCntr" type="xs:string" use="optional"/>
+                  <xs:attribute name="ItemGroupCode" type="xs:string" use="optional"/>
+                  <xs:attribute name="ItemID" type="xs:string" use="optional"/>
+                  <xs:attribute name="ItemKey" type="xs:string" use="optional"/>
+                  <xs:attribute name="Lockid" type="xs:string" use="optional"/>
+                  <xs:attribute name="MaxModifyTS" type="xs:dateTime" use="optional"/>
+                  <xs:attribute name="Modifyprogid" type="xs:string" use="optional"/>
+                  <xs:attribute name="Modifyts" type="xs:dateTime" use="optional"/>
+                  <xs:attribute name="Modifyuserid" type="xs:string" use="optional"/>
+                  <xs:attribute name="OrganizationCode" type="xs:string" use="optional"/>
+                  <xs:attribute name="UnitOfMeasure" type="xs:string" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="LineCharges">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="LineCharge">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="ChargeAmount" type="xs:decimal" use="optional"/>
+                            <xs:attribute name="ChargeCategory" type="xs:string" use="optional"/>
+                            <xs:attribute name="ChargeName" type="xs:string" use="optional"/>
+                            <xs:attribute name="ChargeNameKey" type="xs:string" use="optional"/>
+                            <xs:attribute name="ChargePerLine" type="xs:decimal" use="optional"/>
+                            <xs:attribute name="ChargePerUnit" type="xs:decimal" use="optional"/>
+                            <xs:attribute name="InvoicedChargeAmount" type="xs:decimal" use="optional"/>
+                            <xs:attribute name="InvoicedChargePerLine" type="xs:decimal" use="optional"/>
+                            <xs:attribute name="InvoicedChargePerUnit" type="xs:decimal" use="optional"/>
+                            <xs:attribute name="IsBillable" type="xs:string" use="optional"/>
+                            <xs:attribute name="IsDiscount" type="xs:string" use="optional"/>
+                            <xs:attribute name="Reference" type="xs:string" use="optional"/>
+                            <xs:attribute name="RemainingChargeAmount" type="xs:decimal" use="optional"/>
+                            <xs:attribute name="RemainingChargePerLine" type="xs:decimal" use="optional"/>
+                            <xs:attribute name="RemainingChargePerUnit" type="xs:decimal" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="LineTaxes">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="LineTax">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="ChargeCategory" type="xs:string" use="optional"/>
+                            <xs:attribute name="ChargeName" type="xs:string" use="optional"/>
+                            <xs:attribute name="ChargeNameKey" type="xs:string" use="optional"/>
+                            <xs:attribute name="InvoicedTax" type="xs:decimal" use="optional"/>
+                            <xs:attribute name="Reference_1" type="xs:string" use="optional"/>
+                            <xs:attribute name="Reference_2" type="xs:string" use="optional"/>
+                            <xs:attribute name="Reference_3" type="xs:string" use="optional"/>
+                            <xs:attribute name="RemainingTax" type="xs:decimal" use="optional"/>
+                            <xs:attribute name="Tax" type="xs:decimal" use="optional"/>
+                            <xs:attribute name="TaxName" type="xs:string" use="optional"/>
+                            <xs:attribute name="TaxPercentage" type="xs:decimal" use="optional"/>
+                            <xs:attribute name="TaxableFlag" type="xs:string" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="TaxSummary">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="TaxSummaryDetail">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute name="InvoicedTax" type="xs:decimal" use="optional"/>
+                                  <xs:attribute name="OverallTax" type="xs:decimal" use="optional"/>
+                                  <xs:attribute name="RemainingTax" type="xs:decimal" use="optional"/>
+                                  <xs:attribute name="TaxName" type="xs:string" use="optional"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="OrderStatuses">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="OrderStatus">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="OrderHeaderKey" type="xs:string" use="optional"/>
+                            <xs:attribute name="OrderLineKey" type="xs:string" use="optional"/>
+                            <xs:attribute name="OrderLineScheduleKey" type="xs:string" use="optional"/>
+                            <xs:attribute name="OrderReleaseKey" type="xs:string" use="optional"/>
+                            <xs:attribute name="OrderReleaseStatusKey" type="xs:string" use="optional"/>
+                            <xs:attribute name="PipelineKey" type="xs:string" use="optional"/>
+                            <xs:attribute name="Status" type="xs:string" use="optional"/>
+                            <xs:attribute name="StatusDate" type="xs:dateTime" use="optional"/>
+                            <xs:attribute name="StatusDescription" type="xs:string" use="optional"/>
+                            <xs:attribute name="StatusQty" type="xs:string" use="optional"/>
+                            <xs:attribute name="TotalQuantity" type="xs:string" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="LinePackListPriceInfo">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="Charges" type="xs:decimal" use="optional"/>
+                      <xs:attribute name="ExtendedPrice" type="xs:decimal" use="optional"/>
+                      <xs:attribute name="LineTotal" type="xs:decimal" use="optional"/>
+                      <xs:attribute name="ListPrice" type="xs:decimal" use="optional"/>
+                      <xs:attribute name="RetailPrice" type="xs:decimal" use="optional"/>
+                      <xs:attribute name="Tax" type="xs:decimal" use="optional"/>
+                      <xs:attribute name="UnitPrice" type="xs:decimal" use="optional"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:all>
+            <xs:attribute name="CarrierServiceCode" type="xs:string" use="optional"/>
+            <xs:attribute name="Createuserid" type="xs:string" use="optional"/>
+            <xs:attribute name="DeliveryMethod" type="xs:string" use="optional"/>
+            <xs:attribute name="DepartmentCode" type="xs:string" use="optional"/>
+            <xs:attribute name="FulfillmentType" type="xs:string" use="optional"/>
+            <xs:attribute name="GiftFlag" type="xs:string" use="optional"/>
+            <xs:attribute name="GiftWrap" type="xs:string" use="optional"/>
+            <xs:attribute name="LineType" type="xs:string" use="optional"/>
+            <xs:attribute name="Modifyts" type="xs:dateTime" use="optional"/>
+            <xs:attribute name="OrderLineKey" type="xs:string" use="optional"/>
+            <xs:attribute name="OrderedQty" type="xs:string" use="optional"/>
+            <xs:attribute name="PackListType" type="xs:string" use="optional"/>
+            <xs:attribute name="PrimeLineNo" type="xs:string" use="optional"/>
+            <xs:attribute name="ReqDeliveryDate" type="xs:dateTime" use="optional"/>
+            <xs:attribute name="SCAC" type="xs:string" use="optional"/>
+            <xs:attribute name="ShipNode" type="xs:string" use="optional"/>
+            <xs:attribute name="Status" type="xs:string" use="optional"/>
+            <xs:attribute name="StatusQuantity" type="xs:string" use="optional"/>
+            <xs:attribute name="SubLineNo" type="xs:string" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="Extn">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute name="ExtnScheduleShipDate" type="xs:string"/>
+                <xs:attribute name="ExtnTenderMessage" type="xs:string"/>
+                <xs:attribute name="ExtnTransactionID" type="xs:string"/>
+                <xs:attribute name="ExtnLoyaltyNo" type="xs:string"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="CarrierAccountNo" type="xs:string" use="optional"/>
+      <xs:attribute name="CarrierServiceCode" type="xs:string" use="optional"/>
+      <xs:attribute name="Createts" type="xs:dateTime" use="optional"/>
+      <xs:attribute name="Currency" type="xs:string" use="optional"/>
+      <xs:attribute name="CustReqDeliveryDate" type="xs:dateTime" use="optional"/>
+      <xs:attribute name="CustomerPoNo" type="xs:string" use="optional"/>
+      <xs:attribute name="DeliveryCode" type="xs:string" use="optional"/>
+      <xs:attribute name="DeliveryMethod" type="xs:string" use="optional"/>
+      <xs:attribute name="Division" type="xs:string" use="optional"/>
+      <xs:attribute name="DocumentType" type="xs:string" use="optional"/>
+      <xs:attribute name="EnteredBy" type="xs:string" use="optional"/>
+      <xs:attribute name="EnterpriseCode" type="xs:string" use="optional"/>
+      <xs:attribute name="EntryType" type="xs:string" use="optional"/>
+      <xs:attribute name="FOB" type="xs:string" use="optional"/>
+      <xs:attribute name="HoldFlag" type="xs:string" use="optional"/>
+      <xs:attribute name="HoldReasonCode" type="xs:string" use="optional"/>
+      <xs:attribute name="MaxOrderReleaseStatus" type="xs:string" use="optional"/>
+      <xs:attribute name="MaxOrderReleaseStatusDesc" type="xs:string" use="optional"/>
+      <xs:attribute name="MinOrderReleaseStatus" type="xs:string" use="optional"/>
+      <xs:attribute name="MinOrderReleaseStatusDesc" type="xs:string" use="optional"/>
+      <xs:attribute name="NotifyAfterShipmentFlag" type="xs:string" use="optional"/>
+      <xs:attribute name="OrderDate" type="xs:dateTime" use="optional"/>
+      <xs:attribute name="OrderHeaderKey" type="xs:string" use="optional"/>
+      <xs:attribute name="OrderName" type="xs:string" use="optional"/>
+      <xs:attribute name="OrderReleaseKey" type="xs:string" use="optional"/>
+      <xs:attribute name="OrderType" type="xs:string" use="optional"/>
+      <xs:attribute name="OtherCharges" type="xs:decimal" use="optional"/>
+      <xs:attribute name="PackSlipMessage" type="xs:string" use="optional"/>
+      <xs:attribute name="PacklistType" type="xs:string" use="optional"/>
+      <xs:attribute name="PersonalizeCode" type="xs:string" use="optional"/>
+      <xs:attribute name="PriorityCode" type="xs:string" use="optional"/>
+      <xs:attribute name="Purpose" type="xs:string" use="optional"/>
+      <xs:attribute name="ReleaseNo" type="xs:string" use="optional"/>
+      <xs:attribute name="ReleaseSeqNo" type="xs:string" use="optional"/>
+      <xs:attribute name="ReqCancelDate" type="xs:dateTime" use="optional"/>
+      <xs:attribute name="ReqDeliveryDate" type="xs:dateTime" use="optional"/>
+      <xs:attribute name="ReqShipDate" type="xs:dateTime" use="optional"/>
+      <xs:attribute name="SCAC" type="xs:string" use="optional"/>
+      <xs:attribute name="SalesOrderNo" type="xs:string" use="optional"/>
+      <xs:attribute name="SellerOrganizationCode" type="xs:string" use="optional"/>
+      <xs:attribute name="ShipAdviceNo" type="xs:string" use="optional"/>
+      <xs:attribute name="ShipCompleteFlag" type="xs:string" use="optional"/>
+      <xs:attribute name="ShipLineComplete" type="xs:string" use="optional"/>
+      <xs:attribute name="ShipNode" type="xs:string" use="optional"/>
+      <xs:attribute name="ShipNodeClass" type="xs:string" use="optional"/>
+      <xs:attribute name="ShipOrderComplete" type="xs:string" use="optional"/>
+      <xs:attribute name="ShipToId" type="xs:string" use="optional"/>
+      <xs:attribute name="ShipToKey" type="xs:string" use="optional"/>
+      <xs:attribute name="Status" type="xs:string" use="optional"/>
+      <xs:attribute name="SupplierCode" type="xs:string" use="optional"/>
+      <xs:attribute name="SupplierName" type="xs:string" use="optional"/>
+      <xs:attribute name="TaxpayerId" type="xs:string" use="optional"/>
+      <xs:attribute name="isHistory" type="xs:string" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
